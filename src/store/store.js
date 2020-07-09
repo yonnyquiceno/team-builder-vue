@@ -8,7 +8,7 @@ const initialState = {teamMembers: []}
 
 export default new Vuex.Store({
   state: initialState,
-  
+
   mutations: {
     ADD_TEAM_MEMBER(state, payload) {
       state.teamMembers.push(payload)
@@ -21,7 +21,7 @@ export default new Vuex.Store({
       state.teamMembers = payload
     }
   },
-  
+
   actions: {
     fetchTeamMembers({commit}) {
       axios.get('http://localhost:3000/team_members')
@@ -31,8 +31,8 @@ export default new Vuex.Store({
     },
     addTeamMember({commit}, teamMember) {
       axios.post('http://localhost:3000/team_members', teamMember)
-        .then(() => {
-          commit("ADD_TEAM_MEMBER", teamMember)
+        .then((res) => {
+          commit("ADD_TEAM_MEMBER", res.data)
         })
     },
     removeTeamMember({commit}, teamMember) {

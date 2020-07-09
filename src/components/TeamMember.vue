@@ -32,6 +32,7 @@
   .user-pic-container {
     height: 50px;
     width: 50px;
+    overflow: hidden;
     margin-top: 5px;
     border-radius: 50%;
     box-shadow: 0 0 8px 0 rgba(0,0,0,.1);
@@ -40,7 +41,6 @@
   .user-pic {
     height: 50px;
     filter: grayscale(100%) opacity(1);
-    border-radius: 50%;
   }
 
   .clear-panel {

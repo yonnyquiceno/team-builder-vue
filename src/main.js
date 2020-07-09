@@ -5,17 +5,17 @@ import store from './store/store'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import TeamWidget from './components/TeamWidget'
+import TeamBuilder from './components/TeamBuilder/TeamBuilder'
 import HelloWorld from './components/HelloWorld'
 
 Vue.use(VueRouter)
 Vue.use(BootstrapVue)
-Vue.use(IconsPlugin) 
+Vue.use(IconsPlugin)
 
 Vue.config.productionTip = false
 
 const routes = [
-  {path: '/team_builder', component: TeamWidget},
+  {path: '/team_builder', component: TeamBuilder},
   {path: '/hello_world', component: HelloWorld, props: {msg: "Priori's Vue Prototype"}}
 ]
 
